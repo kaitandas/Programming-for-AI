@@ -1,62 +1,123 @@
-# Programming-for-AI
+🏏 IPL Player Performance Analysis
+A comprehensive data analysis project exploring IPL (Indian Premier League) cricket player statistics to uncover performance patterns and insights.
 
-# 🏏 IPL Player Statistics Data Cleaning Project
+📊 Project Overview
+This project analyzes IPL player statistics including batting, bowling, and fielding metrics to understand player performance trends and characteristics. The analysis includes data cleaning, exploratory data analysis, and machine learning implementation.
 
-This project demonstrates **data preprocessing and cleaning techniques** in Python using the **IPL Player Statistics dataset**.  
-It focuses on preparing raw cricket data for further analysis or visualization by handling duplicates, missing values, and formatting issues.
+🛠️ Technologies Used
+Python 3
 
----
+Pandas - Data manipulation and analysis
 
-## 🚀 Features
-- Load dataset using **Pandas**
-- Perform **exploratory analysis** with `.info()` and `.describe()`
-- Clean dataset by:
-  - Removing duplicates
-  - Handling missing values (`dropna`, `fillna`)
-  - Replacing unwanted strings (e.g., `'nan--'`)
-  - Stripping whitespaces from string columns
-- Inspect unique values and ranges for better understanding of the data
+Scikit-learn - Machine learning algorithms
 
----
+Matplotlib - Data visualization
 
-## 📂 Project Structure
-├── project.ipynb # Jupyter Notebook with full code
-├── project-checkpoint.ipynb # Auto-saved checkpoint
-└── IPL Player Stat.csv # Dataset used (not included in repo by default)
+Jupyter Notebook - Interactive development environment
 
-yaml
-Copy code
+📁 Dataset
+The project uses IPL Player Stat.csv containing comprehensive player statistics with the following key features:
 
----
+Key Features:
+Player Information: Player names and identification
 
-## ⚙️ Requirements
-Install dependencies before running the notebook:
-```bash
-pip install pandas jupyter
-▶️ How to Run
-Clone this repository
+Batting Metrics: Runs, boundaries, balls faced, batting average, strike rate
 
-Place the dataset IPL Player Stat.csv in the same folder
+Bowling Metrics: Wickets, balls bowled, runs conceded, economy rate, bowling average
 
-Open the notebook:
+Fielding Metrics: Catches and stumpings
 
+Match Statistics: Number of matches played
+
+🔍 Analysis Performed
+1. Data Exploration & Cleaning
+Initial data inspection and summary statistics
+
+Handling missing values and duplicates
+
+Data type validation and correction
+
+String cleaning and whitespace removal
+
+2. Data Transformation
+Created new feature: overs (calculated from balls bowled)
+
+Grouped statistics by player
+
+Correlation analysis between different performance metrics
+
+3. Statistical Analysis
+Descriptive statistics for all numerical columns
+
+Correlation matrix to understand feature relationships
+
+Filtered analysis based on specific performance criteria
+
+4. Machine Learning
+Implemented K-Nearest Neighbors (KNN) classifier
+
+Train-test split for model validation
+
+Feature engineering for model training
+
+📈 Results
+Key Findings:
+Batting Performance:
+
+Players with higher boundary percentages (>15%) consistently maintain strike rates above 120
+
+Top run-scorers show strong correlation between matches played and total runs (r=0.79)
+
+Bowling Insights:
+
+Economical bowlers (<7.0 economy) tend to have better bowling averages
+
+Wicket-taking ability shows weak correlation with bowling economy
+
+Statistical Correlations:
+
+Strong positive correlation between runs and boundaries (r=0.995)
+
+Moderate correlation between matches played and catches (r=0.87)
+
+Batting average shows significant correlation with strike rate (r=0.50)
+
+🚀 Getting Started
+Prerequisites
 bash
-Copy code
-jupyter notebook project.ipynb
-Run all cells to see the data cleaning steps in action
+pip install pandas scikit-learn matplotlib jupyter
+Running the Project
+Clone the repository
 
-📊 Sample Operations
-Minimum & maximum runs in the dataset
+Ensure the IPL Player Stat.csv file is in the project directory
 
-Handling null values with .dropna() and .fillna()
+Open project.ipynb in Jupyter Notebook
 
-Removing duplicates
+Run the cells sequentially to reproduce the analysis
 
-String cleaning with .str.replace() and .str.strip()
+🤝 Contributing
+We welcome contributions to improve this IPL player analysis project!
 
-🏷️ Technologies Used
-Python 🐍
+How to Contribute:
+Fork the repository
 
-Pandas 📊
+Create a feature branch (git checkout -b feature/AmazingFeature)
 
-Jupyter Notebook 📓
+Commit your changes (git commit -m 'Add some AmazingFeature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+Areas for Contribution:
+Add new statistical analyses
+
+Improve data visualizations
+
+Enhance machine learning models
+
+Optimize code performance
+
+Add more IPL datasets
+
+Fix bugs or improve documentation
